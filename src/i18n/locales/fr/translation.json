@@ -24,5 +24,6 @@
   "no_stock": "Aucun inventaire saisi.",
   "stock_by_store":"Stocks par magasin:",
   "manage_inventory": "Gestion d'inventaire",
-  "inventory_list":"Liste des inventaires"
+  "inventory_list":"Liste des inventaires",
+  "export_to_csv": " Exporter en CSV "
 }

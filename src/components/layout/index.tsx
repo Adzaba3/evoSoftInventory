@@ -1,15 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Header from 'src/components/header'
 
-export const getNoneLayout = (page: React.ReactElement) => page;
+export const getNoneLayout = (page: React.ReactElement) => page
 
 export const getDefaultLayout = (page: React.ReactElement) => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <div className="flex min-h-screen flex-col bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        {page}
-      </main>
+      <main className="container mx-auto flex-grow px-4 py-8">{page}</main>
     </div>
-  );
-};
+  )
+}

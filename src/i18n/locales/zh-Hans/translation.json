@@ -24,5 +24,6 @@
   "no_stock": "没有记录的库存。",
   "stock_by_store": "按商店划分的库存：",
   "manage_inventory": "库存管理",
-  "inventory_list": "库存列表"
+  "inventory_list": "库存列表",
+  "export_to_csv": "导出为 CSV"
 }

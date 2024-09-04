@@ -24,5 +24,7 @@
   "no_stock": "在庫が記録されていません。",
   "stock_by_store": "店舗ごとの在庫：",
   "manage_inventory": "在庫管理",
-  "inventory_list": "在庫リスト"
+  "inventory_list": "在庫リスト",
+  "export_to_csv": "CSVにエクスポート"
+  
 }

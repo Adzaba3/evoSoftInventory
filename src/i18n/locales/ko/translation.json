@@ -24,5 +24,6 @@
   "no_stock": "등록된 재고가 없습니다.",
   "stock_by_store": "매장별 재고:",
   "manage_inventory": "재고 관리",
-  "inventory_list": "재고 목록"
+  "inventory_list": "재고 목록",
+  "export_to_csv": "CSV로 내보내기"
 }

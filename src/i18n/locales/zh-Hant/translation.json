@@ -21,5 +21,6 @@
   "no_stock": "沒有記錄的庫存。",
   "stock_by_store": "按商店劃分的庫存：",
   "manage_inventory": "庫存管理",
-  "inventory_list": "庫存列表"
+  "inventory_list": "庫存列表",
+  "export_to_csv": "匯出為 CSV"
 }

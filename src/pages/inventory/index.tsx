@@ -5,6 +5,7 @@ import InventoryList from 'src/components/inventory-list'
 import Pagination from 'src/components/pagination/'
 import { magasins, produits } from 'src/data/staticData'
 import useLocalStorageState from 'src/hooks/use-localstorage-state'
+import { exportInventairesToCSV } from 'src/utils/exportInventairesToCSV'
 import { useTranslation } from 'react-i18next'
 
 const Inventory: React.FC = () => {
@@ -43,22 +44,32 @@ const Inventory: React.FC = () => {
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
 
+  const handleExportCSV = () => {
+    exportInventairesToCSV(inventaires, produits, magasins)
+  }
+
   return (
-    <div>
-      <div className="flex items-center justify-between">
-        <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text py-4 text-4xl font-extrabold text-transparent">
+    <div className="p-4 md:p-8">
+      <div className="mb-4 flex flex-col justify-between space-y-4 md:flex-row md:items-center md:space-y-0">
+        <h1 className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl md:text-4xl">
           {t('manage_inventory')}
         </h1>
-        <button
-          onClick={() => {
-            setSelectedInventaire(null)
-            setIsModalOpen(true)
-          }}
-          className="mb-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-        >
-          {t('add_inventory')}
-        </button>
+        <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+          <button
+            onClick={() => {
+              setSelectedInventaire(null)
+              setIsModalOpen(true)
+            }}
+            className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+          >
+            {t('add_inventory')}
+          </button>
+          <button onClick={handleExportCSV} className="rounded bg-green-500 px-4 py-2 text-white hover:bg-green-600">
+            {t('export_to_csv')}
+          </button>
+        </div>
       </div>
+
       <InventoryList
         inventaires={currentInventaires}
         produits={produits}

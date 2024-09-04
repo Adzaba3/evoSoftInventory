@@ -24,5 +24,6 @@
   "no_stock": "Инвентарь не записан.",
   "stock_by_store": "Запасы по магазину:",
   "manage_inventory": "Управление запасами",
-  "inventory_list": "Список инвентаря"
+  "inventory_list": "Список инвентаря",
+  "export_to_csv": "Экспортировать в CSV"
 }

@@ -24,11 +24,11 @@ const InventaireList: React.FC<InventaireListProps> = ({ inventaires, produits, 
     <div className="overflow-hidden rounded-lg bg-white shadow-sm">
       <h2 className="bg-gray-100 p-4 text-2xl font-bold text-gray-800">{t('inventory_list')}</h2>
       {inventaires.length === 0 ? (
-        <p className="p-4 text-gray-600">{t('no stock')}</p>
+        <p className="p-4 text-gray-600">{t('no_stock')}</p>
       ) : (
         <div>
           {inventaires.map((inventaire) => (
-            <div key={inventaire.id} className="border-b last:border-b-0">
+            <div key={inventaire.id} className="border-b">
               <div
                 className="flex cursor-pointer items-center justify-between p-4 hover:bg-gray-50"
                 onClick={() => toggleExpand(inventaire.id)}

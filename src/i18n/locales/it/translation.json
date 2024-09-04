@@ -24,5 +24,6 @@
   "no_stock": "Nessun inventario registrato.",
   "stock_by_store": "Stock per negozio:",
   "manage_inventory": "Gestione dell'inventario",
-  "inventory_list": "Elenco degli inventari"
+  "inventory_list": "Elenco degli inventari",
+  "export_to_csv": "Esporta in CSV"
 }

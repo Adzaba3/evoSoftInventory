@@ -45,8 +45,8 @@ const InventaireModal: React.FC<InventaireModalProps> = ({ magasins, produits, o
   }
 
   return (
-    <div className="fixed inset-0 h-full w-full overflow-y-auto bg-gray-600 bg-opacity-50">
-      <div className="relative top-20 mx-auto w-[32rem] rounded-md border bg-gray-50 p-5 shadow-lg">
+    <div className="fixed inset-0 flex h-full w-full items-center justify-center overflow-y-auto bg-gray-600 bg-opacity-50">
+      <div className="relative mx-4 w-full max-w-lg rounded-md border bg-gray-50 p-5 shadow-lg">
         <h3 className="mb-4 text-lg font-medium leading-6 text-gray-900">
           {inventaire ? t('update_inventory') : t('add_inventory')}
         </h3>
@@ -98,11 +98,11 @@ const InventaireModal: React.FC<InventaireModalProps> = ({ magasins, produits, o
                   {({ push, remove }) => (
                     <div>
                       {values.stocks.map((_, index) => (
-                        <div key={index} className="mb-2 flex items-center">
+                        <div key={index} className="mb-2 flex flex-col items-center sm:flex-row">
                           <Field
                             as="select"
                             name={`stocks.${index}.magasinId`}
-                            className="mr-2 flex-grow rounded border bg-white p-2 text-gray-800"
+                            className="mb-2 flex-grow rounded border bg-white p-2 text-gray-800 sm:mb-0 sm:mr-2"
                           >
                             <option value="">{t('select_stock')}</option>
                             {magasins
@@ -118,7 +118,7 @@ const InventaireModal: React.FC<InventaireModalProps> = ({ magasins, produits, o
                           <Field
                             name={`stocks.${index}.quantite`}
                             type="number"
-                            className="mr-2 w-24 rounded border bg-white p-2 text-gray-800"
+                            className="mb-2 w-full rounded border bg-white p-2 text-gray-800 sm:mb-0 sm:mr-2 sm:w-24"
                             placeholder={t('quantity')}
                           />
                           <button
@@ -150,11 +150,11 @@ const InventaireModal: React.FC<InventaireModalProps> = ({ magasins, produits, o
                 </FieldArray>
               </div>
 
-              <div className="flex justify-end">
+              <div className="flex flex-col justify-end sm:flex-row">
                 <button
                   type="button"
                   onClick={onClose}
-                  className="mr-2 rounded bg-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-400"
+                  className="mb-2 rounded bg-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-400 sm:mb-0 sm:mr-2"
                 >
                   {t('cancel')}
                 </button>
